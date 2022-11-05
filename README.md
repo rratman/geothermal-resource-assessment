@@ -19,7 +19,7 @@ streamlit run main.py
 
 ### Visiting the website version
 
-Here is the [link] (geothermal-ra-mpc.herokuapp.com) to
+Here is the [link](geothermal-ra-mpc.herokuapp.com) to
 visiting the website version.
 
 ## Acknowledgement
@@ -33,5 +33,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT]
-(https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/)
