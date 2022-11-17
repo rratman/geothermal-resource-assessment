@@ -79,16 +79,16 @@ with st.form("monte_form"):
     df_done = False
     if submitted:
         with st.spinner('Wait for it...'):
-            try:
+            # try:
                 res = Qel(a,h,phi,rho_r,cr,ti,tf,swi,swf,rf,ec,t)
                 # st.write(res)
                 df, fig1, fig2 = create_freq_table(res)
                 col2.success('Succeeded!')
                 df_done = True
-            except Exception as e:
-                col2.error(str(e)) 
+            # except Exception as e:
+            #     col2.error(str(e)) 
 col1, col2, col3 = st.columns([1,2,1])     
 if df_done:      
     col2.dataframe(df)
     st.plotly_chart(fig1)
-    st.plotly_chart(fig2)
+    # st.plotly_chart(fig2)

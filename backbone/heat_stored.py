@@ -16,7 +16,7 @@ def create_rand_arr(dict_):
         else:
             res = np.random.uniform(dict_['min'],dict_['max'],10000)
     else:
-        res = dict_['min']
+        res = np.array([dict_['min'] for i in range(10000)])
     return res
 
 def Qe(a,h,phi,rho_r,cr,t,sw):
@@ -85,12 +85,22 @@ def create_freq_table(res):
             size=interval_
         ),
         marker_color='#EB89B5',
-        opacity=0.75
+        opacity=0.75,
+        name='Cumulative'
+    ))
+    fig1.add_trace(go.Scatter(
+        x=df['Qel (MWe)'],
+        y=df['Cum. Freq (%)'].values/100,
+        name='Frequency',
+        yaxis='y2'
     ))
     fig1.update_layout(
-        title_text='Frequency',
-        xaxis_title_text='Qel (MWe)', # xaxis label
-        yaxis_title_text='Count', # yaxis label
+        title='Resource assessment result',
+        xaxis=dict(
+            title='Qel (MWe)',
+        ), 
+        yaxis=dict(title='Count', gridcolor='rgba(0, 0, 0, 0)'),
+        yaxis2=dict(title='Cumulative (%)',tickformat='%', overlaying="y", side='right',),
         bargap=0.2, # gap between bars of adjacent location coordinates
     )
     fig2 = go.Figure()
