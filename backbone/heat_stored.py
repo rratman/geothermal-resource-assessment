@@ -86,12 +86,12 @@ def create_freq_table(res):
         ),
         marker_color='#EB89B5',
         opacity=0.75,
-        name='Cumulative'
+        name='Frequency'
     ))
     fig1.add_trace(go.Scatter(
         x=df['Qel (MWe)'],
         y=df['Cum. Freq (%)'].values/100,
-        name='Frequency',
+        name='Cumulative',
         yaxis='y2'
     ))
     fig1.update_layout(
