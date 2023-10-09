@@ -92,3 +92,4 @@ if df_done:
     col2.dataframe(df)
     st.plotly_chart(fig1)
     # st.plotly_chart(fig2)
+    df.to_csv('result.csv', index=False)
