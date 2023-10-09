@@ -1,6 +1,6 @@
 # Geothermal Resource Asssessment Tools
 
-[![Built in Python](https://img.shields.io/badge/Python-3.8%2C%203.9%2C%203.10-blue)](https://www.python.org/downloads/)
+[![Built in Python](https://img.shields.io/badge/Python-3.8%2C%203.9%2C%203.10-blue)](https://www.python.org/downloads/) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1N4M_8ZbcN2Ss124hqswso0LGtLFh2tNK?usp=sharing)
 
 Is a tool for estimating the speculative potential of geothermal
 resources packaged using a modern and very user-friendly streamlit interface.
