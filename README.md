@@ -17,11 +17,6 @@ You can run the content like the usual streamlit project.
 streamlit run main.py
 ```
 
-### Visiting the website version
-
-Here is the [link](geothermal-ra-mpc.herokuapp.com) to
-visiting the website version.
-
 ## Acknowledgement
 
 This project is also grateful to ITB geothermal engineering study program.
