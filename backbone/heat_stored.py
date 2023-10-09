@@ -48,6 +48,18 @@ def Qel(a,h,phi,rho_r,cr,ti,tf,swi,swf,rf,ec,t):
     return res
 
 def create_freq_table(res):
+    # Calculate percentiles
+    percentiles = np.percentile(res, [10, 50, 90])
+
+    # Create a DataFrame for percentiles
+    percentile_df = pd.DataFrame({
+        'Percentile': ['10th', '50th', '90th'],
+        'Qel (MWe)': percentiles
+    })
+
+    # Save percentiles to a CSV file
+    percentile_df.to_csv('percentiles.csv', index=False)
+
     res = np.sort(res)
     min_ = np.min(res)
     max_ = np.max(res)
